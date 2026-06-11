@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نمونه نمایش فونت فارسی - Persian Web Font Architecture™</title>
+    
+    <!-- Preload فونت اصلی -->
+    <link rel="preload" as="font" href="../fonts/optimized/vazirmatn.woff2" crossorigin>
+    
+    <style>
+        /* =============================================
+           Persian Web Font Architecture™ — Example
+           ============================================= */
+        
+        /* فونت اصلی */
+        @font-face {
+            font-family: 'Vazirmatn';
+            src: url('../fonts/optimized/vazirmatn.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+            unicode-range: U+0600-06FF, U+FB50-FDFF, U+FE70-FEFF, U+0020-007E;
+        }
+        
+        @font-face {
+            font-family: 'Vazirmatn';
+            src: url('../fonts/optimized/vazirmatn-bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+            unicode-range: U+0600-06FF, U+FB50-FDFF, U+FE70-FEFF, U+0020-007E;
+        }
+        
+        /* استفاده از فونت */
+        body {
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            font-weight: 400;
+            line-height: 1.8;
+            color: #333;
+            background: #f9f9f9;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-feature-settings: "kern" 1;
+        }
+        
+        h1 {
+            font-weight: 700;
+            font-size: 2rem;
+            color: #1a1a1a;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+        }
+        
+        h2 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: #2a2a2a;
+        }
+        
+        .meta {
+            font-size: 0.85rem;
+            color: #888;
+            direction: ltr;
+            text-align: right;
+        }
+        
+        .latin-text {
+            font-family: 'Vazirmatn', Georgia, serif;
+            direction: ltr;
+            text-align: left;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd;
+        }
+        
+        .footer {
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 2px solid #e0e0e0;
+            font-size: 0.8rem;
+            color: #aaa;
+            text-align: center;
+        }
+        
+        /* =============================================
+           Optimized Font Stack for Persian
+           ============================================= */
+        .font-stack-demo {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>🎯 Persian Web Font Architecture™</h1>
+    <p class="meta">نسخه ۱.۰ | WOFF2 + Subsetting | حجم: ~۱۸KB</p>
+    
+    <p>این یک نمونه نمایش از فونت فارسی بهینه‌شده با <strong>Persian Web Font Architecture™</strong> است.</p>
+    
+    <h2>📝 متن آزمایشی فارسی</h2>
+    
+    <p>
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. 
+        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی 
+        مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد.
+    </p>
+    
+    <p>
+        کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می‌طلبد تا 
+        با نرم‌افزارها شناخت بیشتری را برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو 
+        در زبان فارسی ایجاد کرد. در این صورت می‌توان امید داشت که تمام و دشواری موجود در ارائه 
+        راهکارها و شرایط سخت تایپ به پایان رسد.
+    </p>
+    
+    <h2>🔢 اعداد و ارقام</h2>
+    <p>
+        قیمت: ۱۲۳,۴۵۶,۷۸۹ تومان (۵۰٪ تخفیف)
+        <br>
+        تاریخ: ۱۴۰۵/۰۳/۲۱ — ساعت ۱۵:۳۰
+        <br>
+        امتیاز: ۴.۸ از ۵.۰ (۲۰۲۶ بازدید)
+    </p>
+    
+    <h2>📊 مقایسه حجم فونت</h2>
+    
+    <div class="font-stack-demo">
+        <table style="width:100%; border-collapse: collapse;">
+            <tr>
+                <th style="text-align:right; padding:8px; border-bottom:1px solid #ddd;">فرمت</th>
+                <th style="text-align:right; padding:8px; border-bottom:1px solid #ddd;">حجم</th>
+                <th style="text-align:right; padding:8px; border-bottom:1px solid #ddd;">وضعیت</th>
+            </tr>
+            <tr>
+                <td style="padding:8px;">TTF (کامل)</td>
+                <td style="padding:8px;">۴۵۰ KB</td>
+                <td style="padding:8px; color:red;">❌ غیربهینه</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;">WOFF2 + Subset</td>
+                <td style="padding:8px;">۱۸ KB</td>
+                <td style="padding:8px; color:green;">✅ بهینه</td>
+            </tr>
+            <tr>
+                <td style="padding:8px;">کاهش حجم</td>
+                <td style="padding:8px;" colspan="2">۹۶٪</td>
+            </tr>
+        </table>
+    </div>
+    
+    <h2>🌐 متن انگلیسی (Fallback Test)</h2>
+    
+    <div class="latin-text">
+        <p>
+            This is a demonstration of Persian Web Font Architecture™ (PWFA).
+            The font used is Vazirmatn with Persian subsetting and WOFF2 compression.
+            Total font size: ~18KB for Persian characters + basic Latin.
+        </p>
+    </div>
+    
+    <div class="footer">
+        <p>
+            © ۲۰۲۶ Hadi Jafari (Fanous Web 3) — Persian Web Font Architecture™<br>
+            این نمونه با وضوح ۹۶٪ کاهش حجم فونت نوشته شده است
+        </p>
+    </div>
+    
+</body>
+</html>
