@@ -1,0 +1,66 @@
+# Persian Web Font Architecture™ — Default Configuration
+
+[project]
+name = "Persian Web Font Architecture"
+version = "1.0.0"
+language = "fa"
+
+[paths]
+input_dir = "./fonts/raw"
+output_dir = "./fonts/build"
+temp_dir = "./.temp"
+
+[optimization]
+# Subsetting
+subset = true
+subset_language = "fa"
+subset_preset = ""
+
+# Unicode ranges for Persian
+unicode_ranges = [
+    "U+0020-007E",    # Basic Latin (space, punctuation, numbers)
+    "U+00A0-00FF",    # Latin-1 Supplement
+    "U+0600-06FF",    # Arabic (core Persian/Arabic)
+    "U+0750-077F",    # Arabic Supplement
+    "U+08A0-08FF",    # Arabic Extended-A
+    "U+2000-206F",    # General Punctuation
+    "U+FB50-FDFF",    # Arabic Presentation Forms-A
+    "U+FE70-FEFF",    # Arabic Presentation Forms-B
+]
+
+# Conversion
+target_formats = ["woff2"]
+keep_woff = false
+use_zopfli = false
+
+# CSS generation
+font_display = "swap"
+generate_css = true
+css_template = "font-face-base.css"
+
+[performance]
+# Target metrics
+target_woff2_size_kb = 20
+target_lcp_ms = 1500
+enable_preload = true
+
+[advanced]
+keep_layout_tables = true
+keep_glyph_names = true
+drop_tables = ["DSIG", "TSI1", "TSI3", "TSI5"]
+debug = false
+
+[presets.persian-blog]
+name = "Persian Blog"
+unicode_ranges = ["U+0600-06FF", "U+FB50-FDFF", "U+FE70-FEFF", "U+0020-007E", "U+2000-206F"]
+layout_features = ["*"]
+
+[presets.persian-news]
+name = "Persian News Portal"
+unicode_ranges = ["U+0600-06FF", "U+FB50-FDFF", "U+FE70-FEFF", "U+0020-007E", "U+00A0-00FF", "U+2000-206F"]
+layout_features = ["*"]
+
+[presets.arabic-standard]
+name = "Standard Arabic"
+unicode_ranges = ["U+0600-06FF", "U+0750-077F", "U+FB50-FDFF", "U+FE70-FEFF", "U+0020-007E"]
+layout_features = ["*"]
