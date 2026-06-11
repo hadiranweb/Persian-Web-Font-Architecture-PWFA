@@ -1,0 +1,64 @@
+/* ================================================================
+   Persian Web Font Architecture™ — Base @font-face Template
+   ================================================================
+   استفاده: این قالب را در پروژه خود کپی کنید و مقادیر را جایگزین کنید
+   ================================================================ */
+
+/* === وزن‌های استاندارد استاندارد === */
+@font-face {
+    font-family: 'FontName';
+    src: url('../fonts/optimized/font-regular.woff2') format('woff2'),
+         url('../fonts/optimized/font-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF,
+                   U+FB50-FDFF, U+FE70-FEFF,
+                   U+0020-007E, U+00A0-00FF,
+                   U+2000-206F, U+3000-303F;
+}
+
+@font-face {
+    font-family: 'FontName';
+    src: url('../fonts/optimized/font-bold.woff2') format('woff2'),
+         url('../fonts/optimized/font-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF,
+                   U+FB50-FDFF, U+FE70-FEFF,
+                   U+0020-007E, U+00A0-00FF,
+                   U+2000-206F, U+3000-303F;
+}
+
+/* === Fallback Stack === */
+/* 
+   برای فارسی: 
+   font-family: 'FontName', 'Vazirmatn', 'IRANSans', Tahoma, sans-serif;
+   
+   برای عربی:
+   font-family: 'FontName', 'Noto Naskh Arabic', 'Traditional Arabic', sans-serif;
+*/
+
+/* === Preload Hint (در HTML) === */
+/*
+<link rel="preload" as="font" href="/fonts/optimized/font-regular.woff2" crossorigin>
+<link rel="preload" as="font" href="/fonts/optimized/font-bold.woff2" crossorigin>
+*/
+
+/* === کاستوم‌سازی برای زبان خاص === */
+/* فقط فارسی */
+@font-face {
+    font-family: 'PersianFont';
+    src: url('font.woff2') format('woff2');
+    font-display: swap;
+    unicode-range: U+0600-06FF, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+/* فقط اعداد فارسی */
+@font-face {
+    font-family: 'PersianNumbers';
+    src: url('numbers.woff2') format('woff2');
+    font-display: swap;
+    unicode-range: U+06F0-06F9;
+}

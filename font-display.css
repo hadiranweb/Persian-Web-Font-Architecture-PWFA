@@ -1,0 +1,43 @@
+/* ================================================================
+   Persian Web Font Architecture™ — CSS راهنمای font-display
+   ================================================================ */
+
+/* 
+   گزینه‌های font-display برای فونت فارسی:
+   
+   1. swap (پیشنهادی برای اغلب موارد)
+      - FOUT (Flash of Unstyled Text) رخ می‌دهد
+      - متن بلافاصله با فونت fallback نمایش داده می‌شود
+      - پس از لود فونت، جایگزین می‌شود
+      - بهترین برای Core Web Vitals (LCP)
+   
+   2. optional (برای فونت‌های تزئینی)
+      - مرورگر تصمیم می‌گیرد فونت لود شود یا نه
+      - مناسب برای فونت‌های نستعلیق تزئینی
+   
+   3. block (پیش‌فرض مرورگر - توصیه نمی‌شود)
+      - FOIT (Flash of Invisible Text) رخ می‌دهد
+      - متن تا ۳ ثانیه نامرئی می‌ماند
+      - آسیب به LCP
+*/
+
+/* ✅ توصیه شده برای متون بلند */
+@font-face {
+    font-family: 'MyTextFont';
+    src: url('font.woff2') format('woff2');
+    font-display: swap;  /* ← انتخاب بهینه */
+}
+
+/* ✅ توصیه شده برای فونت نستعلیق/تزئینی */
+@font-face {
+    font-family: 'MyDecorativeFont';
+    src: url('nastaliq.woff2') format('woff2');
+    font-display: optional;  /* اگر لود شد، خوب؛ اگر نه، مهم نیست */
+}
+
+/* ❌ توصیه نمی‌شود */
+@font-face {
+    font-family: 'BadChoice';
+    src: url('font.woff2') format('woff2');
+    font-display: block;  /* FOIT ایجاد می‌کند */
+}
